@@ -1,0 +1,126 @@
+COMANDOS BASICOS NO GIT
+-----------------------
+
+O GIT é um sistema Distribuido e seguro
+
+rm -rf <== deleta de forma recursiva tudo dentro da pasta
+
+==================
+
+SHA1 ... algoritimo de encriptação ..desenvolvido pela NSA
+gera um conjunto de carcteres de 40 digitos e tambem é unico
+
+exemplo: supportsi@ssi000:~/workspace$ echo "ola mundo" | openssl sha1
+(stdin)= d9802fa01c4c1dfc4ddaf61f766d8d56ad8a8699
+
+
+BLOBS
+-----
+Bloco basico de composição
+se alterado a blob ela gera outro sha1
+
+Tree
+----
+
+as Tree armazenam os blobs , contem os metadados que tem o sha1 e apontam para o blob
+Monta todas as estruturas aonde estão os arquivos
+
+se alterar a blob altera o sha1 da arvore
+
+COMMIT
+------
+Junta tudo
+
+aponta para uma arvore , aponta para um parente (o ultimo commit) , aponta para o autor e para a mensagem
+
+os commits tambem possuem um sha1 
+
+
+
+CHAVE SSH e TOKEN
+
+CHAVE SSH , uma forma de estabelecer conexão segura e encriptada entre duas maquinas ... tem sempre uma chave publica e uma privada
+
+GERAR PAR DE CHAVE para cadastrar no GitHub
+
+supportsi@ssi000:~/workspace$ ssh-keygen -t ed25519 -C capego@hotmail.com
+==========================================================
+Generating public/private ed25519 key pair.
+Enter file in which to save the key (/home/supportsi/.ssh/id_ed25519): 
+Enter passphrase (empty for no passphrase):  a mesma do NoteBook
+Enter same passphrase again: 
+Your identifin hascatio been saved in /home/supportsi/.ssh/id_ed25519
+Your public key has been saved in /home/supportsi/.ssh/id_ed25519.pub
+The key fingerprint is:
+
+acessa a pasta /home...  
+========================
+supportsi@ssi000:~/workspace$ cd /home/supportsi/.ssh
+supportsi@ssi000:~/.ssh$ ls -l
+total 12
+-rw------- 1 supportsi supportsi 464 dez 22 15:38 id_ed25519
+-rw-r--r-- 1 supportsi supportsi 100 dez 22 15:38 id_ed25519.pub
+-rw-r--r-- 1 supportsi supportsi 222 dez 20 10:03 known_hosts
+supportsi@ssi000:~/.ssh$ cat id_ed25519.pub
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJW5fYDxUTS2EP3JNP/iClu3XwAK2qPGOXXMwgz1+xJA capego@hotmail.com
+
+copia a chave e entra no GitHub e cola em setings/chaves ssh
+
+==========================================================
+
+ANTES DE INICIAR O USO DO GIT DEVEMOS ATRIBUIR O USUARIO E EMAIL DE FORMA GLOBAL PARA QUE O GIT FAÇA SEMPRE A IDENTIFICAÇÃO DOS COMMITS
+
+$ git config --global user.email "capego@hotmail.com"
+$ git config --global user.name Capego
+
+==========================================================
+
+usando o GIT
+------------
+
+git init
+=========
+quando for criar novo projeto, deve-se criar uma nova pasta no workspace e dentro dessa nova pasta de projeto usar o comando.
+
+ex : $ mkdir livro-receitas
+
+acessar a pasta e dentro dela criar o arquivo do projeto
+
+ex: $ gedit strogonoff.md ( formatação MarkDown) 
+
+QUANDO SE USA O COMANDO git init ESTAMOS DE FATO CRIANDO UM REPOSITORIO
+
+
+git add
+=======
+Apos feito o arquivo de conteudo , usamos o comando na mesma pasta que esta o arquivo.
+
+ex: $ git add *
+
+git commit
+==========
+Em seguida fazemos o promeiro COMMIT , lembrando de inserir sempre o comentario com a opção -m " comentario " 
+
+ex: $ commit -m "Commit inicial"
+
+
+
+TRACKED E UNTRACKED
+
+Traked = arquivos que temos ciencia ou conhecimento dele
+
+=> Unmodified => arquivos sem modificaçoes
+   Modified => arquivos unmodified alterados
+   stage => arquivos em modo de preparação para outro tipo de   	    agrupamento	. Quando se faz a primeira INIT ADD ele vai direto para stage. e esta pronto pro commit
+
+Untraked =  arquivos que não temos conhecimento
+
+Ao fazer o COMMIT ele faz os arquivos voltarem para UNMODIFIED sempre como um ciclo para novas alterações 
+==========
+
+VER STATUS DO GIT
+
+ $ git status
+ 
+ 
+
