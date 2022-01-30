@@ -1,0 +1,15 @@
+/home/supportsi/CursoDio/Mentoria/bin/Debug/net6.0/Mentoria
+/home/supportsi/CursoDio/Mentoria/bin/Debug/net6.0/Mentoria.deps.json
+/home/supportsi/CursoDio/Mentoria/bin/Debug/net6.0/Mentoria.runtimeconfig.json
+/home/supportsi/CursoDio/Mentoria/bin/Debug/net6.0/Mentoria.dll
+/home/supportsi/CursoDio/Mentoria/bin/Debug/net6.0/ref/Mentoria.dll
+/home/supportsi/CursoDio/Mentoria/bin/Debug/net6.0/Mentoria.pdb
+/home/supportsi/CursoDio/Mentoria/obj/Debug/net6.0/Mentoria.csproj.AssemblyReference.cache
+/home/supportsi/CursoDio/Mentoria/obj/Debug/net6.0/Mentoria.GeneratedMSBuildEditorConfig.editorconfig
+/home/supportsi/CursoDio/Mentoria/obj/Debug/net6.0/Mentoria.AssemblyInfoInputs.cache
+/home/supportsi/CursoDio/Mentoria/obj/Debug/net6.0/Mentoria.AssemblyInfo.cs
+/home/supportsi/CursoDio/Mentoria/obj/Debug/net6.0/Mentoria.csproj.CoreCompileInputs.cache
+/home/supportsi/CursoDio/Mentoria/obj/Debug/net6.0/Mentoria.dll
+/home/supportsi/CursoDio/Mentoria/obj/Debug/net6.0/ref/Mentoria.dll
+/home/supportsi/CursoDio/Mentoria/obj/Debug/net6.0/Mentoria.pdb
+/home/supportsi/CursoDio/Mentoria/obj/Debug/net6.0/Mentoria.genruntimeconfig.cache
